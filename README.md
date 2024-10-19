@@ -38,10 +38,11 @@ To get started with the projects, follow these steps:
    ./project_name
    ```
 
-## Projects
+## Included Projects
 
 Here's a list of the projects included in this repository:
 
-| Project             | Description                                                                                                                                     |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 📋 **Note Manager** | A simple console application that allows users to create, view, and delete notes. It showcases memory management and basic C++ functionalities. |
+| Project              | Description                                                                                                                                                                                  |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 📋 **Note Manager**  | A simple console application that allows users to create, view, and delete notes. It showcases memory management and basic C++ functionalities.                                              |
+| 🎲 **Guessing Game** | A simple console game where the user must guess a random number between 1 and 100. The user has only 5 lives to guess the correct number, and the program provides feedback on each attempt. |
