@@ -40,4 +40,8 @@ To get started with the projects, follow these steps:
 
 ## Projects
 
-list projects...
+Here's a list of the projects included in this repository:
+
+| Project             | Description                                                                                                                                     |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 📋 **Note Manager** | A simple console application that allows users to create, view, and delete notes. It showcases memory management and basic C++ functionalities. |

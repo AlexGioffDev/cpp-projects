@@ -1,0 +1,41 @@
+# Compiled object files
+*.o
+*.obj
+
+# Compiled binary files
+*.exe
+*.out
+*.app
+
+# CMake build directory
+/build/
+*/build/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+*.cmake
+
+# IDE specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Logs
+*.log
+
+# Other files
+*.DS_Store
+*.user
+*.sln
+*.vcxproj
+*.vcxproj.filters
