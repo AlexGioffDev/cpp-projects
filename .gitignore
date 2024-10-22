@@ -39,3 +39,4 @@ Makefile
 *.sln
 *.vcxproj
 *.vcxproj.filters
+test-code/
