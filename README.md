@@ -47,3 +47,4 @@ Here's a list of the projects included in this repository:
 | 📋 **Note Manager**      | A simple console application that allows users to create, view, and delete notes. It showcases memory management and basic C++ functionalities.                                              |
 | 🎲 **Guessing Game**     | A simple console game where the user must guess a random number between 1 and 100. The user has only 5 lives to guess the correct number, and the program provides feedback on each attempt. |
 | 🎬 **Cinema Management** | A console application for managing cinema operations, including adding theaters, booking seats, and managing movie schedules. It demonstrates object-oriented programming.                   |
+| ⚔️ **Simulator Battle**  | A simple battle simulation console application (still in progress). It aims to simulate basic combat mechanics between two entities with future plans for more advanced features.            |
