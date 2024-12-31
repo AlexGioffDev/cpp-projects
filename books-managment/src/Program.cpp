@@ -75,6 +75,7 @@ void Program::run()
 
       status = false;
       std::cout << "Goodbye" << std::endl;
+      pressEnter();
       break;
     }
     default:
