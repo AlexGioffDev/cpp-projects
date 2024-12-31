@@ -26,6 +26,11 @@ void Character::set_speed(int amount)
   speed = amount;
 }
 
+void Character::attackTarget(Character &target)
+{
+  // Corpo vuoto per la classe base
+}
+
 void Character::set_defense(int amount)
 {
   if (amount < 5)
@@ -91,28 +96,6 @@ Character::Character(std::string name, std::string type, int health, int attack,
   }
 }
 
-void Character::attackTarget(Character &target, std::string type)
-{
-  int minDamage{5};
-  int calculateDamage{0};
-
-  if (type == "attack")
-  {
-    calculateDamage = this->attack - target.defense;
-  }
-  else if (type == "sp attack")
-  {
-    calculateDamage = this->spAttack - target.spDefense;
-  }
-
-  if (calculateDamage < minDamage)
-    calculateDamage = minDamage;
-
-  target.takeDamage(calculateDamage);
-
-  std::cout << this->get_name() << " attack " << target.get_name() << " for this damage: " << calculateDamage << std::endl;
-}
-
 void Character::takeDamage(int amount)
 {
   this->health -= amount;
@@ -147,4 +130,19 @@ int Character::get_attack() const
 int Character::get_speed() const
 {
   return this->speed;
+}
+
+int Character::get_defense() const
+{
+  return this->defense;
+}
+
+int Character::get_spAttack() const
+{
+  return this->spAttack;
+}
+
+int Character::get_spDefense() const
+{
+  return this->spDefense;
 }

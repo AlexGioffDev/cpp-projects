@@ -1,35 +1,34 @@
 #include <iostream>
 #include "Character.h"
+#include "Mage.h"    // Assicurati di includere il file dell'header per Mage
+#include "Warrior.h" // Assicurati di includere il file dell'header per Warrior
 #include "Battle.h"
 #include <random>
+#include <memory>
 
 using namespace std;
 
-Character *generate_character();
-
+unique_ptr<Character> generate_character();
 int generate_value(int min, int max = 0);
 
 int main()
 {
+  unique_ptr<Character> warrior = make_unique<Mage>("Razeft");
+  unique_ptr<Character> enemy = generate_character(); // Genera un nemico casuale
 
-  Character warrior{"Razeft", "Warrior", 50, 30, 35, 30, 30, 30};
-  Character *enemy = generate_character();
-
-  Battle battle(warrior, *enemy);
+  Battle battle(*warrior, *enemy);
   battle.startBattle();
+
   while (battle.getStatus())
   {
     battle.battle();
   }
 
-  delete enemy;
-
   return 0;
 }
 
-Character *generate_character()
+unique_ptr<Character> generate_character()
 {
-
   string types[2]{"Warrior", "Mage"};
   string name = "Enemy";
 
@@ -41,7 +40,15 @@ Character *generate_character()
   int spAttack = generate_value(20, 30);
   int spDefense = generate_value(20, 30);
 
-  return new Character{name, types[indexType], health, attack, speed, defense, spAttack, spDefense};
+  // Creare un oggetto di tipo specifico in base al tipo generato
+  if (types[indexType] == "Warrior")
+  {
+    return make_unique<Warrior>(name); // Creare un Warrior
+  }
+  else
+  {
+    return make_unique<Mage>(name); // Creare un Mage
+  }
 }
 
 int generate_value(int min, int max)

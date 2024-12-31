@@ -5,7 +5,7 @@
 
 class Character
 {
-private:
+protected:
   std::string name;
   std::string type;
   int health;
@@ -17,7 +17,8 @@ private:
 
 public:
   Character(std::string name, std::string type, int health, int attack, int speed, int defense, int spAttack, int spDefense);
-  void attackTarget(Character &target, std::string type);
+  virtual ~Character() {};
+  virtual void attackTarget(Character &target);
   void takeDamage(int damage);
   bool isAlive() const;
   void heal(int amount);
@@ -29,6 +30,9 @@ public:
   int get_speed() const;
   int get_health() const;
   int get_attack() const;
+  int get_defense() const;
+  int get_spAttack() const;
+  int get_spDefense() const;
 
   // Setters
   void set_speed(int amount);

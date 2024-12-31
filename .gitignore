@@ -40,3 +40,5 @@ Makefile
 *.vcxproj
 *.vcxproj.filters
 test-code/
+example-raylib/
+example-sfml/
